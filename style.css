@@ -114,3 +114,128 @@ body {
     transform: rotate(45deg) translate(50%, 50%);
 }
 
+/* Square 5: Fancy White Crystal with animated sparkles */
+.square-5 {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(248, 250, 252, 0.9) 25%,
+        rgba(241, 245, 249, 0.95) 50%,
+        rgba(248, 250, 252, 0.9) 75%,
+        rgba(255, 255, 255, 0.95) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 
+        /* Main shadow */
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        /* Crystalline facets */
+        inset 2px 2px 8px rgba(255, 255, 255, 0.8),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.05),
+        /* Outer glow */
+        0 0 40px rgba(255, 255, 255, 0.6),
+        /* Multiple depth layers */
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 12px 24px rgba(0, 0, 0, 0.04);
+    color: #1e293b;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated sparkle overlay */
+.square-5::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+                radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+                radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.7) 1px, transparent 1px),
+                linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.3) 50%, transparent 60%);
+    background-size: 30px 30px, 25px 25px, 35px 35px, 20px 20px, 100% 100%;
+    animation: sparkle 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Diamond shine effect */
+.square-5::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -100%;
+    width: 50%;
+    height: 80%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.8), 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+    transform: skewX(-20deg);
+    animation: shine 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.square-5:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 
+        /* Enhanced main shadow */
+        0 16px 48px rgba(0, 0, 0, 0.15),
+        /* Brighter crystalline facets */
+        inset 3px 3px 12px rgba(255, 255, 255, 1),
+        inset -3px -3px 12px rgba(0, 0, 0, 0.08),
+        /* Intense outer glow */
+        0 0 60px rgba(255, 255, 255, 0.9),
+        0 0 80px rgba(255, 255, 255, 0.6),
+        /* Multiple depth layers */
+        0 8px 24px rgba(0, 0, 0, 0.12),
+        0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.square-5:hover::before {
+    animation-duration: 2s;
+}
+
+.square-5:hover::after {
+    animation-duration: 1.5s;
+}
+
+/* Sparkle animation keyframes */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        opacity: 0.7;
+        transform: rotate(90deg) scale(1.05);
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(180deg) scale(0.95);
+    }
+    75% {
+        opacity: 0.8;
+        transform: rotate(270deg) scale(1.02);
+    }
+}
+
+/* Shine animation keyframes */
+@keyframes shine {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
