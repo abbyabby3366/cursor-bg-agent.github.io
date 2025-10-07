@@ -726,3 +726,315 @@ body {
     }
 }
 
+/* Square 8: Fancy Blue Whale with One Eye */
+.square-8 {
+    background: linear-gradient(135deg, 
+        #1e40af 0%,     /* Deep blue */
+        #2563eb 15%,    /* Blue */
+        #3b82f6 30%,    /* Lighter blue */
+        #1d4ed8 45%,    /* Royal blue */
+        #1e3a8a 60%,    /* Dark blue */
+        #172554 75%,    /* Navy */
+        #0f172a 90%,    /* Very dark blue */
+        #020617 100%);  /* Almost black blue */
+    border-radius: 30px;
+    box-shadow: 
+        /* Ocean glow */
+        0 0 40px rgba(59, 130, 246, 0.8),
+        0 0 80px rgba(37, 99, 235, 0.6),
+        0 0 120px rgba(30, 64, 175, 0.4),
+        /* Depth shadows */
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 20px 60px rgba(0, 0, 0, 0.2),
+        /* Inner whale body highlight */
+        inset 3px 3px 15px rgba(147, 197, 253, 0.3),
+        inset -3px -3px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    color: #dbeafe;
+    font-weight: 900;
+    text-shadow: 
+        0 0 10px rgba(59, 130, 246, 0.8),
+        2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: whale-swim 8s ease-in-out infinite, 
+               ocean-pulse 4s ease-in-out infinite alternate;
+}
+
+/* Whale's single eye */
+.square-8::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle,
+        #ffffff 0%,           /* White center */
+        #e0e7ff 20%,          /* Light blue */
+        #3b82f6 40%,          /* Blue iris */
+        #1d4ed8 70%,          /* Dark blue iris */
+        #1e3a8a 85%,          /* Navy outline */
+        #000000 100%);        /* Black pupil */
+    border-radius: 50%;
+    box-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.8),
+        0 0 25px rgba(59, 130, 246, 0.6),
+        inset 2px 2px 6px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 6px rgba(0, 0, 0, 0.3);
+    animation: whale-blink 6s ease-in-out infinite,
+               eye-glow 3s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+/* Eye pupil */
+.square-8::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 39%;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle,
+        #000000 0%,
+        #1e3a8a 80%,
+        transparent 100%);
+    border-radius: 50%;
+    animation: pupil-follow 4s ease-in-out infinite;
+    z-index: 3;
+}
+
+/* Underwater bubbles and particles */
+.square-8 {
+    background-image: 
+        /* Large bubbles */
+        radial-gradient(circle 4px at 20% 20%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+        radial-gradient(circle 3px at 80% 30%, rgba(147, 197, 253, 0.8) 0%, transparent 50%),
+        radial-gradient(circle 5px at 15% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
+        radial-gradient(circle 2px at 85% 80%, rgba(147, 197, 253, 0.9) 0%, transparent 50%),
+        /* Medium bubbles */
+        radial-gradient(circle 2px at 25% 50%, rgba(255, 255, 255, 0.7) 0%, transparent 50%),
+        radial-gradient(circle 3px at 70% 60%, rgba(147, 197, 253, 0.6) 0%, transparent 50%),
+        radial-gradient(circle 2px at 30% 85%, rgba(255, 255, 255, 0.5) 0%, transparent 50%),
+        /* Small bubbles */
+        radial-gradient(circle 1px at 45% 25%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+        radial-gradient(circle 1px at 60% 40%, rgba(147, 197, 253, 0.7) 0%, transparent 50%),
+        radial-gradient(circle 1px at 40% 75%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+        /* Bioluminescent particles */
+        radial-gradient(circle 1px at 50% 15%, rgba(34, 211, 238, 1) 0%, transparent 30%),
+        radial-gradient(circle 1px at 75% 25%, rgba(6, 182, 212, 0.9) 0%, transparent 30%),
+        radial-gradient(circle 1px at 25% 90%, rgba(14, 165, 233, 0.8) 0%, transparent 30%),
+        /* Whale texture/scales */
+        repeating-linear-gradient(45deg, 
+            transparent 0px, 
+            rgba(147, 197, 253, 0.1) 1px, 
+            transparent 2px, 
+            transparent 8px),
+        /* Main gradient background */
+        linear-gradient(135deg, 
+            #1e40af 0%,
+            #2563eb 15%,
+            #3b82f6 30%,
+            #1d4ed8 45%,
+            #1e3a8a 60%,
+            #172554 75%,
+            #0f172a 90%,
+            #020617 100%);
+    background-size: 
+        8px 8px, 6px 6px, 10px 10px, 4px 4px,
+        4px 4px, 6px 6px, 4px 4px,
+        2px 2px, 2px 2px, 2px 2px,
+        2px 2px, 2px 2px, 2px 2px,
+        16px 16px,
+        100% 100%;
+    background-position:
+        20% 20%, 80% 30%, 15% 70%, 85% 80%,
+        25% 50%, 70% 60%, 30% 85%,
+        45% 25%, 60% 40%, 40% 75%,
+        50% 15%, 75% 25%, 25% 90%,
+        0 0,
+        center center;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat,
+                      no-repeat, no-repeat, no-repeat,
+                      no-repeat, no-repeat, no-repeat,
+                      no-repeat, no-repeat, no-repeat,
+                      repeat,
+                      no-repeat;
+    animation: whale-swim 8s ease-in-out infinite, 
+               ocean-pulse 4s ease-in-out infinite alternate,
+               bubble-float 12s linear infinite;
+}
+
+.square-8:hover {
+    transform: scale(1.15) translateY(-10px) rotate(-2deg);
+    box-shadow: 
+        /* Enhanced ocean glow */
+        0 0 60px rgba(59, 130, 246, 1),
+        0 0 120px rgba(37, 99, 235, 0.8),
+        0 0 180px rgba(30, 64, 175, 0.6),
+        0 0 240px rgba(30, 64, 175, 0.3),
+        /* Enhanced depth shadows */
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 35px 100px rgba(0, 0, 0, 0.3),
+        /* Brighter inner highlights */
+        inset 4px 4px 20px rgba(147, 197, 253, 0.5),
+        inset -4px -4px 20px rgba(0, 0, 0, 0.5);
+    animation: whale-swim 4s ease-in-out infinite, 
+               ocean-pulse 2s ease-in-out infinite alternate,
+               bubble-float 6s linear infinite;
+}
+
+.square-8:hover::before {
+    width: 30px;
+    height: 30px;
+    top: 28%;
+    left: 33%;
+    box-shadow: 
+        0 0 25px rgba(255, 255, 255, 1),
+        0 0 40px rgba(59, 130, 246, 0.8),
+        0 0 60px rgba(59, 130, 246, 0.4),
+        inset 3px 3px 10px rgba(255, 255, 255, 1),
+        inset -3px -3px 10px rgba(0, 0, 0, 0.4);
+    animation: whale-blink 3s ease-in-out infinite,
+               eye-glow 1.5s ease-in-out infinite alternate;
+}
+
+.square-8:hover::after {
+    width: 10px;
+    height: 10px;
+    top: 33%;
+    left: 37%;
+    animation: pupil-follow 2s ease-in-out infinite;
+}
+
+/* Whale swimming animation */
+@keyframes whale-swim {
+    0%, 100% {
+        transform: translateX(0px) rotate(0deg);
+        border-radius: 30px;
+    }
+    25% {
+        transform: translateX(-3px) rotate(-1deg);
+        border-radius: 35px 25px 30px 35px;
+    }
+    50% {
+        transform: translateX(0px) rotate(0deg);
+        border-radius: 25px 35px 35px 25px;
+    }
+    75% {
+        transform: translateX(3px) rotate(1deg);
+        border-radius: 35px 30px 25px 35px;
+    }
+}
+
+/* Ocean pulsing animation */
+@keyframes ocean-pulse {
+    0% {
+        box-shadow: 
+            0 0 40px rgba(59, 130, 246, 0.8),
+            0 0 80px rgba(37, 99, 235, 0.6),
+            0 0 120px rgba(30, 64, 175, 0.4),
+            0 12px 40px rgba(0, 0, 0, 0.4),
+            0 20px 60px rgba(0, 0, 0, 0.2),
+            inset 3px 3px 15px rgba(147, 197, 253, 0.3),
+            inset -3px -3px 15px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 
+            0 0 50px rgba(59, 130, 246, 1),
+            0 0 100px rgba(37, 99, 235, 0.8),
+            0 0 150px rgba(30, 64, 175, 0.6),
+            0 0 200px rgba(30, 64, 175, 0.2),
+            0 15px 50px rgba(0, 0, 0, 0.5),
+            0 25px 80px rgba(0, 0, 0, 0.3),
+            inset 4px 4px 20px rgba(147, 197, 253, 0.4),
+            inset -4px -4px 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Whale blinking animation */
+@keyframes whale-blink {
+    0%, 90%, 100% {
+        height: 25px;
+        opacity: 1;
+    }
+    95% {
+        height: 3px;
+        opacity: 0.8;
+    }
+}
+
+/* Eye glow animation */
+@keyframes eye-glow {
+    0% {
+        box-shadow: 
+            0 0 15px rgba(255, 255, 255, 0.8),
+            0 0 25px rgba(59, 130, 246, 0.6),
+            inset 2px 2px 6px rgba(255, 255, 255, 0.9),
+            inset -2px -2px 6px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 
+            0 0 25px rgba(255, 255, 255, 1),
+            0 0 40px rgba(59, 130, 246, 0.9),
+            0 0 60px rgba(59, 130, 246, 0.5),
+            inset 3px 3px 10px rgba(255, 255, 255, 1),
+            inset -3px -3px 10px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Pupil following animation */
+@keyframes pupil-follow {
+    0%, 100% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(-1px, -1px);
+    }
+    50% {
+        transform: translate(0px, 1px);
+    }
+    75% {
+        transform: translate(1px, -0.5px);
+    }
+}
+
+/* Bubble floating animation */
+@keyframes bubble-float {
+    0%, 100% {
+        background-position:
+            20% 20%, 80% 30%, 15% 70%, 85% 80%,
+            25% 50%, 70% 60%, 30% 85%,
+            45% 25%, 60% 40%, 40% 75%,
+            50% 15%, 75% 25%, 25% 90%,
+            0 0,
+            center center;
+    }
+    25% {
+        background-position:
+            25% 15%, 85% 25%, 20% 65%, 90% 75%,
+            30% 45%, 75% 55%, 35% 80%,
+            50% 20%, 65% 35%, 45% 70%,
+            55% 10%, 80% 20%, 30% 85%,
+            0 0,
+            center center;
+    }
+    50% {
+        background-position:
+            30% 10%, 90% 20%, 25% 60%, 95% 70%,
+            35% 40%, 80% 50%, 40% 75%,
+            55% 15%, 70% 30%, 50% 65%,
+            60% 5%, 85% 15%, 35% 80%,
+            0 0,
+            center center;
+    }
+    75% {
+        background-position:
+            35% 5%, 95% 15%, 30% 55%, 100% 65%,
+            40% 35%, 85% 45%, 45% 70%,
+            60% 10%, 75% 25%, 55% 60%,
+            65% 0%, 90% 10%, 40% 75%,
+            0 0,
+            center center;
+    }
+}
+
