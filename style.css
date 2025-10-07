@@ -465,3 +465,264 @@ body {
     }
 }
 
+/* Square 7: Fancy Spiky Green Square */
+.square-7 {
+    background: linear-gradient(135deg, 
+        #22c55e 0%,
+        #16a34a 20%,
+        #15803d 40%,
+        #166534 60%,
+        #14532d 80%,
+        #052e16 100%);
+    border-radius: 15px;
+    box-shadow: 
+        0 0 30px rgba(34, 197, 94, 0.6),
+        0 0 60px rgba(34, 197, 94, 0.4),
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 2px 2px 8px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: visible;
+    color: #ffffff;
+    font-weight: 900;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(34, 197, 94, 0.8),
+        0 0 20px rgba(34, 197, 94, 0.6);
+    animation: pulse-glow 3s ease-in-out infinite alternate, float-rotate 8s linear infinite;
+}
+
+/* Top spike */
+.square-7::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #22c55e;
+    filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.8));
+    animation: spike-rotate 4s linear infinite;
+}
+
+/* Bottom spike */
+.square-7::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #16a34a;
+    filter: drop-shadow(0 0 10px rgba(22, 163, 74, 0.8));
+    animation: spike-rotate 4s linear infinite reverse;
+}
+
+/* Left and right spikes using additional pseudo-elements */
+.square-7 {
+    --spike-color-left: #15803d;
+    --spike-color-right: #166534;
+}
+
+/* Create additional spikes using box-shadows and gradients */
+.square-7 {
+    background-image: 
+        /* Left spike simulation */
+        linear-gradient(90deg, transparent 0%, transparent 10%, var(--spike-color-left) 15%, transparent 20%, transparent 100%),
+        /* Right spike simulation */ 
+        linear-gradient(270deg, transparent 0%, transparent 10%, var(--spike-color-right) 15%, transparent 20%, transparent 100%),
+        /* Original gradient */
+        linear-gradient(135deg, 
+            #22c55e 0%,
+            #16a34a 20%,
+            #15803d 40%,
+            #166534 60%,
+            #14532d 80%,
+            #052e16 100%);
+}
+
+/* Additional spike elements using transformed borders */
+.square-7 {
+    border: none;
+    outline: 8px solid transparent;
+    outline-offset: -4px;
+}
+
+/* Enhanced hover effects */
+.square-7:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 
+        0 0 50px rgba(34, 197, 94, 0.9),
+        0 0 100px rgba(34, 197, 94, 0.6),
+        0 0 150px rgba(34, 197, 94, 0.3),
+        0 12px 48px rgba(0, 0, 0, 0.4),
+        inset 3px 3px 12px rgba(255, 255, 255, 0.3),
+        inset -3px -3px 12px rgba(0, 0, 0, 0.4);
+    animation: pulse-glow 1.5s ease-in-out infinite alternate;
+}
+
+.square-7:hover::before {
+    border-bottom-color: #34d399;
+    filter: drop-shadow(0 0 20px rgba(52, 211, 153, 1));
+    animation-duration: 2s;
+}
+
+.square-7:hover::after {
+    border-top-color: #34d399;
+    filter: drop-shadow(0 0 20px rgba(52, 211, 153, 1));
+    animation-duration: 2s;
+}
+
+/* Pulsing glow animation */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 
+            0 0 30px rgba(34, 197, 94, 0.6),
+            0 0 60px rgba(34, 197, 94, 0.4),
+            0 8px 32px rgba(0, 0, 0, 0.3),
+            inset 2px 2px 8px rgba(255, 255, 255, 0.2),
+            inset -2px -2px 8px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 
+            0 0 40px rgba(34, 197, 94, 0.8),
+            0 0 80px rgba(34, 197, 94, 0.6),
+            0 0 120px rgba(34, 197, 94, 0.2),
+            0 10px 40px rgba(0, 0, 0, 0.4),
+            inset 3px 3px 12px rgba(255, 255, 255, 0.3),
+            inset -3px -3px 12px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Spike rotation animation */
+@keyframes spike-rotate {
+    0% {
+        transform: translateX(-50%) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translateX(-50%) rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: translateX(-50%) rotate(180deg) scale(1);
+    }
+    75% {
+        transform: translateX(-50%) rotate(270deg) scale(1.1);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg) scale(1);
+    }
+}
+
+/* Float and rotate animation */
+@keyframes float-rotate {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-3px) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Side spikes using multiple box-shadows and pseudo-elements */
+.square-7 {
+    /* Add side spike effects using border and box-shadow */
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-image: linear-gradient(45deg, #22c55e, #16a34a, #15803d) 1;
+}
+
+/* Create left side spike effect */
+.square-7 {
+    background-image: 
+        /* Left spike using gradient */
+        radial-gradient(ellipse 20px 8px at 0% 50%, #22c55e 0%, #16a34a 50%, transparent 70%),
+        /* Right spike using gradient */ 
+        radial-gradient(ellipse 20px 8px at 100% 50%, #22c55e 0%, #16a34a 50%, transparent 70%),
+        /* Top left corner spike */
+        radial-gradient(ellipse 12px 12px at 0% 0%, #15803d 0%, transparent 60%),
+        /* Top right corner spike */
+        radial-gradient(ellipse 12px 12px at 100% 0%, #15803d 0%, transparent 60%),
+        /* Bottom left corner spike */
+        radial-gradient(ellipse 12px 12px at 0% 100%, #166534 0%, transparent 60%),
+        /* Bottom right corner spike */
+        radial-gradient(ellipse 12px 12px at 100% 100%, #166534 0%, transparent 60%),
+        /* Particle effects */
+        radial-gradient(circle 3px at 25% 25%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+        radial-gradient(circle 2px at 75% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+        radial-gradient(circle 2px at 30% 75%, rgba(255, 255, 255, 0.7) 0%, transparent 50%),
+        radial-gradient(circle 3px at 80% 80%, rgba(255, 255, 255, 0.5) 0%, transparent 50%),
+        /* Original gradient background */
+        linear-gradient(135deg, 
+            #22c55e 0%,
+            #16a34a 20%,
+            #15803d 40%,
+            #166534 60%,
+            #14532d 80%,
+            #052e16 100%);
+    background-size: 
+        40px 16px, 40px 16px,
+        24px 24px, 24px 24px, 24px 24px, 24px 24px,
+        6px 6px, 4px 4px, 4px 4px, 6px 6px,
+        100% 100%;
+    background-position:
+        -12px center, calc(100% + 12px) center,
+        -6px -6px, calc(100% + 6px) -6px, -6px calc(100% + 6px), calc(100% + 6px) calc(100% + 6px),
+        25% 25%, 75% 30%, 30% 75%, 80% 80%,
+        center center;
+    background-repeat: no-repeat;
+}
+
+/* Enhanced particle animation */
+.square-7 {
+    animation: pulse-glow 3s ease-in-out infinite alternate, 
+               float-rotate 8s linear infinite, 
+               particle-dance 6s ease-in-out infinite;
+}
+
+/* Particle dance animation */
+@keyframes particle-dance {
+    0%, 100% {
+        background-position:
+            -12px center, calc(100% + 12px) center,
+            -6px -6px, calc(100% + 6px) -6px, -6px calc(100% + 6px), calc(100% + 6px) calc(100% + 6px),
+            25% 25%, 75% 30%, 30% 75%, 80% 80%,
+            center center;
+    }
+    25% {
+        background-position:
+            -10px center, calc(100% + 10px) center,
+            -4px -4px, calc(100% + 4px) -4px, -4px calc(100% + 4px), calc(100% + 4px) calc(100% + 4px),
+            28% 22%, 72% 35%, 25% 70%, 85% 85%,
+            center center;
+    }
+    50% {
+        background-position:
+            -8px center, calc(100% + 8px) center,
+            -2px -2px, calc(100% + 2px) -2px, -2px calc(100% + 2px), calc(100% + 2px) calc(100% + 2px),
+            20% 30%, 80% 25%, 35% 80%, 75% 75%,
+            center center;
+    }
+    75% {
+        background-position:
+            -14px center, calc(100% + 14px) center,
+            -8px -8px, calc(100% + 8px) -8px, -8px calc(100% + 8px), calc(100% + 8px) calc(100% + 8px),
+            22% 28%, 78% 32%, 32% 78%, 82% 78%,
+            center center;
+    }
+}
+
