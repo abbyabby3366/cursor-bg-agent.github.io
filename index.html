@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="input-container">
+        <form id="prompt-form">
+            <input type="text" id="prompt-input" placeholder="describe the square that you want" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="status-message" style="display: none; margin-top: 10px; color: #666;"></div>
+    </div>
+
     <div class="grid-container">
         <div class="square square-1">
             Gradient<br>& Shadow
@@ -24,6 +32,51 @@
             Crystal<br>White
         </div>
     </div>
+
+    <script>
+        document.getElementById('prompt-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const promptInput = document.getElementById('prompt-input');
+            const statusMessage = document.getElementById('status-message');
+            const prompt = promptInput.value.trim();
+
+            if (!prompt) return;
+
+            // Disable the form
+            promptInput.disabled = true;
+            e.target.querySelector('button').disabled = true;
+
+            // Show status message
+            statusMessage.textContent = 'please wait approximately 5 mins to update';
+            statusMessage.style.display = 'block';
+
+            try {
+                const response = await fetch('https://hooks.zapier.com/hooks/catch/16342343/u9xhxmd/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt: prompt
+                    })
+                });
+
+                if (response.ok) {
+                    promptInput.value = '';
+                } else {
+                    statusMessage.textContent = 'Error submitting prompt. Please try again.';
+                }
+            } catch (error) {
+                statusMessage.textContent = 'Error submitting prompt. Please try again.';
+                console.error('Error:', error);
+            }
+
+            // Re-enable the form
+            promptInput.disabled = false;
+            e.target.querySelector('button').disabled = false;
+        });
+    </script>
 </body>
 </html>
 
