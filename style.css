@@ -1638,3 +1638,444 @@ body {
     }
 }
 
+/* Square 12: Ultra Fancy Tiffany Blue Princess with Elaborate Crown */
+.square-12 {
+    background: linear-gradient(135deg, 
+        #A8E6CF 0%,
+        #81D8D0 15%,
+        #5ECFC6 30%,
+        #4BC0C0 45%,
+        #81D8D0 60%,
+        #B3ECE7 75%,
+        #C7F2EE 90%,
+        #E8F9F7 100%);
+    border-radius: 25px;
+    box-shadow: 
+        /* Magical tiffany glow */
+        0 0 60px rgba(129, 216, 208, 0.9),
+        0 0 120px rgba(94, 207, 198, 0.7),
+        0 0 180px rgba(129, 216, 208, 0.5),
+        0 0 240px rgba(168, 230, 207, 0.3),
+        /* Crystalline depth shadows */
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        0 35px 100px rgba(0, 0, 0, 0.15),
+        /* Inner princess glow */
+        inset 3px 3px 15px rgba(255, 255, 255, 0.6),
+        inset -3px -3px 15px rgba(0, 0, 0, 0.1),
+        /* Royal shimmer */
+        inset 0 0 30px rgba(129, 216, 208, 0.4);
+    position: relative;
+    overflow: visible;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 12px;
+    text-shadow: 
+        2px 2px 6px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(129, 216, 208, 0.9),
+        0 0 30px rgba(129, 216, 208, 0.6),
+        0 0 45px rgba(168, 230, 207, 0.4);
+    animation: princess-float 5s ease-in-out infinite,
+               royal-glow 4s ease-in-out infinite alternate,
+               shimmer-dance 8s linear infinite;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Elaborate Crown Base Band */
+.square-12::before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 12px;
+    background: linear-gradient(180deg, 
+        #FFD700 0%,
+        #FFC107 15%,
+        #FF8F00 30%,
+        #E65100 45%,
+        #FF8F00 60%,
+        #FFC107 75%,
+        #FFE082 90%,
+        #FFF3C4 100%);
+    border-radius: 8px;
+    box-shadow: 
+        /* Crown glow */
+        0 0 25px rgba(255, 215, 0, 0.8),
+        0 0 50px rgba(255, 215, 0, 0.5),
+        /* Crown depth */
+        0 4px 15px rgba(0, 0, 0, 0.3),
+        /* Inner royal shine */
+        inset 2px 2px 6px rgba(255, 255, 255, 0.8),
+        inset -2px -2px 6px rgba(0, 0, 0, 0.2);
+    animation: crown-shimmer 3s ease-in-out infinite alternate;
+}
+
+/* Crown Spikes and Royal Jewels using complex backgrounds */
+.square-12::after {
+    content: '';
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 40px;
+    background-image:
+        /* Center Crown Peak - Tallest */
+        linear-gradient(0deg, transparent 0%, transparent 40%, #FFD700 45%, #FFC107 55%, #FFD700 65%, transparent 70%, transparent 100%),
+        /* Left Crown Peak */
+        linear-gradient(10deg, transparent 0%, transparent 50%, #E6C55B 55%, #D4AF37 65%, #E6C55B 75%, transparent 80%, transparent 100%),
+        /* Right Crown Peak */
+        linear-gradient(-10deg, transparent 0%, transparent 50%, #E6C55B 55%, #D4AF37 65%, #E6C55B 75%, transparent 80%, transparent 100%),
+        /* Left Side Peak */
+        linear-gradient(25deg, transparent 0%, transparent 60%, #CFAF3A 65%, #B8941F 75%, transparent 80%, transparent 100%),
+        /* Right Side Peak */
+        linear-gradient(-25deg, transparent 0%, transparent 60%, #CFAF3A 65%, #B8941F 75%, transparent 80%, transparent 100%);
+    background-size: 
+        20px 40px, 
+        18px 35px, 
+        18px 35px,
+        15px 30px,
+        15px 30px;
+    background-position: 
+        50% 0%,
+        35% 5%,
+        65% 5%,
+        20% 10%,
+        80% 10%;
+    background-repeat: no-repeat;
+    animation: crown-peaks-glow 4s ease-in-out infinite alternate;
+}
+
+/* Royal Jewels and Sparkles using additional background layers */
+.square-12 {
+    background-image:
+        /* Center Royal Diamond */
+        radial-gradient(ellipse 10px 12px at 50% 32%, 
+            #E3F2FD 0%, 
+            #BBDEFB 20%,
+            #90CAF9 40%,
+            #64B5F6 60%,
+            #42A5F5 80%,
+            rgba(66, 165, 245, 0) 85%),
+        /* Left Crown Jewel - Ruby */
+        radial-gradient(circle 7px at 35% 42%, 
+            #FFEBEE 0%,
+            #FFCDD2 25%,
+            #EF5350 50%,
+            #D32F2F 75%,
+            rgba(211, 47, 47, 0) 80%),
+        /* Right Crown Jewel - Emerald */
+        radial-gradient(circle 7px at 65% 42%, 
+            #E8F5E8 0%,
+            #C8E6C9 25%,
+            #66BB6A 50%,
+            #388E3C 75%,
+            rgba(56, 142, 60, 0) 80%),
+        /* Left Side Jewel - Amethyst */
+        radial-gradient(circle 5px at 25% 50%, 
+            #F3E5F5 0%,
+            #E1BEE7 25%,
+            #AB47BC 50%,
+            #7B1FA2 75%,
+            rgba(123, 31, 162, 0) 80%),
+        /* Right Side Jewel - Citrine */
+        radial-gradient(circle 5px at 75% 50%, 
+            #FFF8E1 0%,
+            #FFECB3 25%,
+            #FFB74D 50%,
+            #F57C00 75%,
+            rgba(245, 124, 0, 0) 80%),
+        /* Magical Sparkles */
+        radial-gradient(circle 2px at 20% 20%, rgba(255, 255, 255, 0.9) 0%, transparent 50%),
+        radial-gradient(circle 3px at 80% 25%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+        radial-gradient(circle 2px at 15% 70%, rgba(255, 255, 255, 0.7) 0%, transparent 50%),
+        radial-gradient(circle 2px at 85% 75%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+        radial-gradient(circle 1px at 30% 15%, rgba(255, 255, 255, 1) 0%, transparent 50%),
+        radial-gradient(circle 2px at 70% 18%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+        radial-gradient(circle 1px at 25% 85%, rgba(255, 255, 255, 0.9) 0%, transparent 50%),
+        radial-gradient(circle 2px at 75% 88%, rgba(255, 255, 255, 0.7) 0%, transparent 50%),
+        /* Royal Aura Rings */
+        radial-gradient(ellipse 100px 30px at 50% 50%, rgba(129, 216, 208, 0.3) 0%, transparent 60%),
+        radial-gradient(circle 70px at 50% 50%, rgba(168, 230, 207, 0.2) 0%, transparent 70%),
+        radial-gradient(circle 90px at 50% 50%, rgba(129, 216, 208, 0.15) 0%, transparent 80%),
+        /* Princess Energy Waves */
+        radial-gradient(ellipse 120px 40px at 30% 70%, rgba(199, 242, 238, 0.25) 0%, transparent 65%),
+        radial-gradient(ellipse 110px 35px at 70% 30%, rgba(179, 236, 231, 0.25) 0%, transparent 65%),
+        /* Shimmer Overlay */
+        linear-gradient(45deg, 
+            transparent 0%, 
+            transparent 30%, 
+            rgba(255, 255, 255, 0.4) 35%, 
+            rgba(255, 255, 255, 0.6) 40%, 
+            rgba(255, 255, 255, 0.4) 45%, 
+            transparent 50%, 
+            transparent 100%),
+        /* Main Tiffany Gradient */
+        linear-gradient(135deg, 
+            #A8E6CF 0%,
+            #81D8D0 15%,
+            #5ECFC6 30%,
+            #4BC0C0 45%,
+            #81D8D0 60%,
+            #B3ECE7 75%,
+            #C7F2EE 90%,
+            #E8F9F7 100%);
+    background-size:
+        20px 24px, 14px 14px, 14px 14px, 10px 10px, 10px 10px,
+        4px 4px, 6px 6px, 4px 4px, 4px 4px, 2px 2px, 4px 4px, 2px 2px, 4px 4px,
+        200px 60px, 140px 140px, 180px 180px,
+        240px 80px, 220px 70px,
+        100% 100%,
+        100% 100%;
+    background-position:
+        50% 24%, 35% 36%, 65% 36%, 25% 44%, 75% 44%,
+        20% 20%, 80% 25%, 15% 70%, 85% 75%, 30% 15%, 70% 18%, 25% 85%, 75% 88%,
+        50% 50%, 50% 50%, 50% 50%,
+        30% 70%, 70% 30%,
+        -50% -50%,
+        center center;
+    background-repeat: no-repeat;
+}
+
+/* Enhanced Hover Effects with Royal Transformation */
+.square-12:hover {
+    transform: scale(1.2) translateY(-15px) rotate(-2deg);
+    box-shadow: 
+        /* Intensified magical glow */
+        0 0 100px rgba(129, 216, 208, 1),
+        0 0 200px rgba(94, 207, 198, 0.9),
+        0 0 300px rgba(129, 216, 208, 0.7),
+        0 0 400px rgba(168, 230, 207, 0.5),
+        /* Majestic elevation shadows */
+        0 35px 100px rgba(0, 0, 0, 0.35),
+        0 60px 150px rgba(0, 0, 0, 0.25),
+        /* Enhanced inner royal glow */
+        inset 4px 4px 20px rgba(255, 255, 255, 0.8),
+        inset -4px -4px 20px rgba(0, 0, 0, 0.15),
+        inset 0 0 50px rgba(129, 216, 208, 0.6);
+    animation: princess-float-royal 2.5s ease-in-out infinite,
+               royal-glow-intense 2s ease-in-out infinite alternate,
+               shimmer-dance-fast 4s linear infinite;
+    border-color: rgba(255, 255, 255, 1);
+    filter: brightness(1.1) saturate(1.3);
+}
+
+.square-12:hover::before {
+    width: 90px;
+    height: 15px;
+    box-shadow: 
+        0 0 40px rgba(255, 215, 0, 1),
+        0 0 80px rgba(255, 215, 0, 0.7),
+        0 6px 25px rgba(0, 0, 0, 0.4),
+        inset 3px 3px 8px rgba(255, 255, 255, 1),
+        inset -3px -3px 8px rgba(0, 0, 0, 0.3);
+    animation: crown-shimmer-intense 1.5s ease-in-out infinite alternate;
+}
+
+.square-12:hover::after {
+    width: 100px;
+    height: 45px;
+    animation: crown-peaks-glow-intense 2s ease-in-out infinite alternate;
+}
+
+/* Princess Floating Animation */
+@keyframes princess-float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    20% {
+        transform: translateY(-4px) translateX(-1px) rotate(0.5deg);
+    }
+    40% {
+        transform: translateY(-8px) translateX(0px) rotate(0deg);
+    }
+    60% {
+        transform: translateY(-6px) translateX(1px) rotate(-0.5deg);
+    }
+    80% {
+        transform: translateY(-2px) translateX(0px) rotate(0deg);
+    }
+}
+
+/* Royal Floating on Hover */
+@keyframes princess-float-royal {
+    0%, 100% {
+        transform: scale(1.2) translateY(-15px) rotate(-2deg);
+    }
+    25% {
+        transform: scale(1.2) translateY(-20px) translateX(-2px) rotate(-1deg);
+    }
+    50% {
+        transform: scale(1.2) translateY(-25px) translateX(0px) rotate(-2deg);
+    }
+    75% {
+        transform: scale(1.2) translateY(-20px) translateX(2px) rotate(-3deg);
+    }
+}
+
+/* Royal Glow Animation */
+@keyframes royal-glow {
+    0% {
+        box-shadow: 
+            0 0 60px rgba(129, 216, 208, 0.9),
+            0 0 120px rgba(94, 207, 198, 0.7),
+            0 0 180px rgba(129, 216, 208, 0.5),
+            0 0 240px rgba(168, 230, 207, 0.3),
+            0 20px 60px rgba(0, 0, 0, 0.25),
+            0 35px 100px rgba(0, 0, 0, 0.15),
+            inset 3px 3px 15px rgba(255, 255, 255, 0.6),
+            inset -3px -3px 15px rgba(0, 0, 0, 0.1),
+            inset 0 0 30px rgba(129, 216, 208, 0.4);
+    }
+    100% {
+        box-shadow: 
+            0 0 80px rgba(129, 216, 208, 1),
+            0 0 160px rgba(94, 207, 198, 0.9),
+            0 0 240px rgba(129, 216, 208, 0.7),
+            0 0 320px rgba(168, 230, 207, 0.5),
+            0 25px 80px rgba(0, 0, 0, 0.3),
+            0 45px 120px rgba(0, 0, 0, 0.2),
+            inset 4px 4px 20px rgba(255, 255, 255, 0.8),
+            inset -4px -4px 20px rgba(0, 0, 0, 0.15),
+            inset 0 0 40px rgba(129, 216, 208, 0.6);
+    }
+}
+
+/* Intense Royal Glow on Hover */
+@keyframes royal-glow-intense {
+    0% {
+        filter: brightness(1.1) saturate(1.3) contrast(1);
+    }
+    100% {
+        filter: brightness(1.25) saturate(1.6) contrast(1.1);
+    }
+}
+
+/* Crown Shimmer Animation */
+@keyframes crown-shimmer {
+    0% {
+        background: linear-gradient(180deg, 
+            #FFD700 0%,
+            #FFC107 15%,
+            #FF8F00 30%,
+            #E65100 45%,
+            #FF8F00 60%,
+            #FFC107 75%,
+            #FFE082 90%,
+            #FFF3C4 100%);
+    }
+    100% {
+        background: linear-gradient(180deg, 
+            #FFF3C4 0%,
+            #FFE082 15%,
+            #FFC107 30%,
+            #FFD700 45%,
+            #FFC107 60%,
+            #FF8F00 75%,
+            #E65100 90%,
+            #FF8F00 100%);
+    }
+}
+
+/* Intense Crown Shimmer on Hover */
+@keyframes crown-shimmer-intense {
+    0% {
+        filter: brightness(1) saturate(1);
+    }
+    100% {
+        filter: brightness(1.3) saturate(1.5);
+    }
+}
+
+/* Crown Peaks Glow */
+@keyframes crown-peaks-glow {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(255, 215, 0, 0.6));
+    }
+    100% {
+        filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+    }
+}
+
+/* Intense Crown Peaks Glow on Hover */
+@keyframes crown-peaks-glow-intense {
+    0% {
+        filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+    }
+    100% {
+        filter: brightness(1.5) drop-shadow(0 0 25px rgba(255, 215, 0, 1));
+    }
+}
+
+/* Shimmer Dance Animation */
+@keyframes shimmer-dance {
+    0% {
+        background-position:
+            50% 24%, 35% 36%, 65% 36%, 25% 44%, 75% 44%,
+            20% 20%, 80% 25%, 15% 70%, 85% 75%, 30% 15%, 70% 18%, 25% 85%, 75% 88%,
+            50% 50%, 50% 50%, 50% 50%,
+            30% 70%, 70% 30%,
+            -50% -50%,
+            center center;
+    }
+    25% {
+        background-position:
+            50% 22%, 38% 34%, 62% 38%, 28% 42%, 72% 52%,
+            25% 18%, 75% 30%, 18% 65%, 82% 80%, 35% 12%, 65% 23%, 20% 90%, 80% 83%,
+            55% 45%, 45% 55%, 50% 50%,
+            35% 65%, 75% 25%,
+            -25% -25%,
+            center center;
+    }
+    50% {
+        background-position:
+            50% 26%, 32% 40%, 68% 34%, 22% 48%, 78% 46%,
+            15% 25%, 85% 20%, 12% 75%, 88% 70%, 25% 18%, 75% 15%, 30% 80%, 70% 90%,
+            45% 55%, 55% 45%, 50% 50%,
+            25% 75%, 65% 35%,
+            0% 0%,
+            center center;
+    }
+    75% {
+        background-position:
+            50% 20%, 40% 32%, 60% 42%, 30% 40%, 70% 54%,
+            30% 15%, 70% 35%, 25% 80%, 75% 65%, 40% 10%, 60% 25%, 35% 75%, 65% 95%,
+            60% 40%, 40% 60%, 50% 50%,
+            40% 60%, 80% 20%,
+            25% 25%,
+            center center;
+    }
+    100% {
+        background-position:
+            50% 24%, 35% 36%, 65% 36%, 25% 44%, 75% 44%,
+            20% 20%, 80% 25%, 15% 70%, 85% 75%, 30% 15%, 70% 18%, 25% 85%, 75% 88%,
+            50% 50%, 50% 50%, 50% 50%,
+            30% 70%, 70% 30%,
+            50% 50%,
+            center center;
+    }
+}
+
+/* Fast Shimmer Dance on Hover */
+@keyframes shimmer-dance-fast {
+    0%, 100% {
+        background-size:
+            20px 24px, 14px 14px, 14px 14px, 10px 10px, 10px 10px,
+            4px 4px, 6px 6px, 4px 4px, 4px 4px, 2px 2px, 4px 4px, 2px 2px, 4px 4px,
+            200px 60px, 140px 140px, 180px 180px,
+            240px 80px, 220px 70px,
+            100% 100%,
+            100% 100%;
+    }
+    50% {
+        background-size:
+            24px 28px, 18px 18px, 18px 18px, 14px 14px, 14px 14px,
+            6px 6px, 8px 8px, 6px 6px, 6px 6px, 4px 4px, 6px 6px, 4px 4px, 6px 6px,
+            240px 80px, 180px 180px, 220px 220px,
+            280px 100px, 260px 90px,
+            100% 100%,
+            100% 100%;
+    }
+}
+
