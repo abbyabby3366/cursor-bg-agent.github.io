@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.square:hover {
+    transform: scale(1.05);
+}
+
+/* Square 1: Gradient with shadow */
+.square-1 {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Square 2: Border with rotation */
+.square-2 {
+    background: transparent;
+    border: 5px solid #4ecdc4;
+    border-radius: 0;
+    transform: rotate(5deg);
+    color: #4ecdc4;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.square-2:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* Square 3: Multiple box shadows (3D effect) */
+.square-3 {
+    background: #f7b731;
+    border-radius: 50%;
+    box-shadow: 
+        0 4px 0 #e67e22,
+        0 8px 0 #d35400,
+        0 12px 0 #c0392b,
+        0 16px 20px rgba(0, 0, 0, 0.4);
+    color: #2c3e50;
+}
+
+.square-3:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 
+        0 6px 0 #e67e22,
+        0 12px 0 #d35400,
+        0 18px 0 #c0392b,
+        0 24px 30px rgba(0, 0, 0, 0.5);
+}
+
